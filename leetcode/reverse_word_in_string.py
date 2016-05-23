@@ -13,7 +13,7 @@ def reverse1(string):
 
 def reverse(string):
     return ''.join(string[i] for i in xrange(len(string) - 1, -1, -1))
-# print reverse('abcdefg')
+print reverse('abcdefg jeff reiher')
 
 # print ''.join(letter for letter in reversed('practice makes perfect'.split(' ')))
 
