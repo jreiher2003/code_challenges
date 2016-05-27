@@ -16,8 +16,7 @@ def fibo1(n):
 		lst.append(lst[n-1] + lst[n-2])
 		i+=1
 	return lst(n)
-
-# print fibo1(15)
+print fibo1(15)
 
 def fibonacci(n):
     a,b = 1,1 
