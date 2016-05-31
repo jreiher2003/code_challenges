@@ -31,5 +31,19 @@ def is_pprime(num):
     print factor_list.pop()
 
 print is_pprime(600851475143)
+import math
 
+def is_prime_p(num):
+    prime = False
+    if num > 1:
+        prime = True
+        k = 2 
+        num = math.sqrt(num)
+        while k <= num and prime == True:
+            if num % k == 0:
+                prime = False 
+            k += 1
+    return prime
+
+print is_prime_p(600851475143)
 
