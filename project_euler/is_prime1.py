@@ -12,7 +12,7 @@ def is_prime(num):
     return len(lst), max(lst)
                 
 
-print is_prime(100)
+# print is_prime(100)
 # print is_prime(600851475143)
 
 def is_pprime(num):
@@ -30,7 +30,7 @@ def is_pprime(num):
         factor_list.sort()
     print factor_list.pop()
 
-print is_pprime(600851475143)
+# print is_pprime(600851475143)
 import math
 
 def is_prime_p(num):
@@ -38,12 +38,12 @@ def is_prime_p(num):
     if num > 1:
         prime = True
         k = 2 
-        num = math.sqrt(num)
-        while k <= num and prime == True:
-            if num % k == 0:
+        num1 = math.sqrt(num)
+        while k <= num1 and prime == True:
+            if num1 % k == 0:
                 prime = False 
             k += 1
-    return prime
+    return prime,k
 
 print is_prime_p(600851475143)
 
