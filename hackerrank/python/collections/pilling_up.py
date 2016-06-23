@@ -1,20 +1,20 @@
-from collections import deque 
+from collections import deque
 
-# d = deque([4,3,2,1,3,4])  
-d = deque([1,3,2])
-i = 0
-d_len = (len(d)/2)-1
-print i, d_len
-while i <= d_len:
-    if d[0] >= d[-1]:
-        d.popleft()
-        d.pop()
-        i+=1
-        if len(d) == 0:
-            print "Yes" 
-    else:
-        print "No"
-        break
-        
+
+def stackable(cubes):
+    curr = cubes.popleft() if cubes[0] > cubes[-1] else cubes.pop()
+    while cubes:
+        left, right = cubes[0], cubes[-1]
+        if left >= right and left <= curr:
+            curr = cubes.popleft()
+        elif right > left and right <= curr:
+            curr = cubes.pop()
+        else:
+            return False
+    return True
+
+for i in range(int(raw_input())):
+    n, cubes = int(raw_input()), deque(map(int, raw_input().strip().split()))
+    print('Yes' if stackable(cubes) else 'No') 
     
 # print d
