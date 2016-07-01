@@ -1,6 +1,0 @@
-n, m = raw_input().strip().split()
-n,m = int(n),int(m)
-lst = map(int, raw_input().strip().split())
-A = set(map(int,raw_input().strip().split()))
-B = set(map(int,raw_input().strip().split()))
-print sum([(i in A) - (i in B) for i in lst])
